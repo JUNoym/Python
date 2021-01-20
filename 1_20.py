@@ -7,9 +7,13 @@ class Person(object):
     def introduction(self):
         print('Hi My name is {} {}yaers old'.format(self.name, self.age))
 
+    def __del__(self):
+        print('オベジェクトが削除された時に呼ばれる関数')
+
 
 person1 = Person('Junya', 22)
 person1.introduction()
+del person1
 
 # ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー
 
