@@ -13,6 +13,11 @@ class ToyotaCar(Car):
 
 
 class TeslaCar(Car):
+    def __init__(self, model='Model S', enable_auto_run=False):
+        # self.model = model
+        super().__init__(model)  # 親の__init__を呼び出すことができる
+        self.enable_auto_run = enable_auto_run
+
     def run(self):
         print('super fast')  # Carクラスから継承したメソッドもオーバーライドできる
 
