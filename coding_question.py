@@ -20,3 +20,20 @@ for alphabet in alphabets:
         break
 
 print(result)
+
+# C問題
+board = input()
+result = 'D'
+
+target = board[0]  # 最初に来た石が５回続けば勝敗が決定するけど、そうでない場合は引き分けになる
+count = 0
+
+for stone in board:
+    if stone != '.' and stone == target:
+        count += 1
+    else:
+        break
+
+    if count == 5:
+        result = target
+print(result)
