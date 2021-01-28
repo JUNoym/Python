@@ -47,3 +47,43 @@ for i in range(5):
 
 
 print(result)
+
+# 五目並べ斜めに揃ったプレイヤーを出力する実装
+
+board = []
+result = 'D'
+direction = [True, False]
+
+for i in range(5):
+    board.append(input())
+# print(board)
+
+for reverse in direction:
+    # print(reverse)
+    target = ''
+    count = 0
+
+    if reverse:
+        j = 0
+        j_diff = 1
+    else:
+        j = 4
+        j_diff = -1
+
+    for i in range(5):
+
+        stone = board[j][i]
+
+        if target == '':
+            target = stone
+
+        if stone != '.' and stone == target:
+            count += 1
+
+        j = j + j_diff
+
+    if count == 5:
+        result = target
+        break
+
+print(result)
