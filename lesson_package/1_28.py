@@ -52,35 +52,35 @@ print(result)
 
 board = []
 result = 'D'
-direction = [True, False]
+
+switch = [True, False]
 
 for i in range(5):
     board.append(input())
 # print(board)
 
-for reverse in direction:
-    # print(reverse)
+for TF in switch:
+    # print(TF)
     target = ''
     count = 0
 
-    if reverse:
+    if TF:
         j = 0
         j_diff = 1
     else:
         j = 4
-        j_diff = -1
+        j_diff = - 1
 
     for i in range(5):
 
         stone = board[j][i]
-
         if target == '':
             target = stone
 
-        if stone != '.' and stone == target:
+        if target != '.' and stone == target:
             count += 1
 
-        j = j + j_diff
+        j += j_diff
 
     if count == 5:
         result = target
