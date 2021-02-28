@@ -15,4 +15,4 @@ for i in lst:
         continue
     ans.append(i)
 
-print(*ans)　  # 可変長引数 複数の引数をタプルとして受け取ることができる
+print(*ans)  # 可変長引数 複数の引数をタプルとして受け取ることができる
