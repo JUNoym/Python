@@ -1,7 +1,7 @@
 import sys
 
-nums = [2, 3, 41, 4]
-target = 6
+# nums = [2, 3, 41, 4]
+# target = 6
 
 
 class Solution:
@@ -20,5 +20,7 @@ class Solution:
         return []
 
 
-instance = Solution()
-print(instance.twoSum(nums, target))
+if __name__ == "__main__":
+    args = sys.argv
+    inst = Solution()
+    print(inst.twoSum(args[1] args[2]))
