@@ -1,3 +1,9 @@
+import sys
+
+nums = [2, 3, 41, 4]
+target = 6
+
+
 class Solution:
     def twoSum(self, nums, target):
 
@@ -13,3 +19,6 @@ class Solution:
 
         return []
 
+
+instance = Solution()
+print(instance.twoSum(nums, target))
