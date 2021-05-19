@@ -19,8 +19,3 @@ class Solution:
 
         return []
 
-
-if __name__ == "__main__":
-    args = sys.argv
-    inst = Solution()
-    print(inst.twoSum(args[1] args[2]))
