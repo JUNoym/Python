@@ -1,8 +1,8 @@
-W, H, X, Y, R = map(int, input().split())
+W, H, x, y, r = map(int, input().split())
 ok = True
-if X < R or W-R < X:
+if x < r or x + r > W:
     ok = False
-if Y < R or H-R < Y:
+if y < r or y + r > H:
     ok = False
 if ok:
     print("Yes")
