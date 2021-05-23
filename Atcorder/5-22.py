@@ -1,19 +1,12 @@
+import sys
+from collections import defaultdict
 N = int(input())
-lst = []
 count = 0
 
-for i in range(N):
-    a = list(map(int, input().split()))
-    lst.append(a)
-# print(lst)
+A = list(map(int, input().split()))
+B = list(map(int, input().split()))
+C = list(map(int, input().split()))
 
-
-A = (lst[0][0], lst[0][1], lst[0][2])
-B = (lst[1][0], lst[1][1], lst[1][2])
-C = (lst[2][0], lst[2][1], lst[2][2])
-print(A)
-print(B)
-print(C)
 
 for i in range(1, N+1):
     for j in range(1, N+1):
@@ -22,3 +15,19 @@ for i in range(1, N+1):
             count += 1
 
 print(count)
+
+
+# [解答]
+input = sys.stdin.readline
+
+n = int(input())
+a = list(map(int, input().split()))
+b = list(map(int, input().split()))
+c = list(map(int, input().split()))
+cnt = defaultdict(lambda: 0)
+for i in a:
+    cnt[i] += 1
+ans = 0
+for i in c:
+    ans += cnt[b[i - 1]]
+print(ans)
