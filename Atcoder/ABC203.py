@@ -10,7 +10,7 @@ def has_duplicates(seq):
 is_dup = (has_duplicates(A))
 
 if A[0] == A[1] == A[2]:
-    print(1)
+    print(A[2])
 if is_dup:
     result = ([k for k, v in collections.Counter(A).items() if v == 1])
     for v in result:
