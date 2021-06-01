@@ -31,3 +31,24 @@ for row in range(n):
     print(tmp)
 
 # ----------------------------------------------
+# grading
+
+while True:
+    m, f, r = map(int, input().split())
+    if m == -1 and f == -1 and r == -1:
+        break
+
+    result = m+f
+    if result >= 80:
+        print("A")
+    elif result >= 65 and 80 > result:
+        print("B")
+
+    elif result >= 50 and 65 > result:
+        print("C")
+
+    elif result >= 30 and 50 > result and r >= 50:
+        print("C")
+
+    elif result > 30:
+        print("F")
