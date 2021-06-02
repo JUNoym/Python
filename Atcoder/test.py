@@ -30,7 +30,7 @@ for row in range(n):
         tmp += A[row][col]*B[col]
     print(tmp)
 
-# ----------------------------------------------
+
 # grading
 
 while True:
