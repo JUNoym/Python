@@ -14,3 +14,4 @@ for x in range(n):
 
 for row in range(n):
     print(*C[row])
+print()
