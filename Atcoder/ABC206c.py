@@ -1,15 +1,10 @@
-import sys
-input = sys.stdin.readline
-
-N = int(input())
+from collections import Counter
+n = int(input())
 A = list(map(int, input().split()))
-count = 0
+A.sort()
+total = n*(n-1)//2
 
-# Ai = [int(i) for i in range(N)]
-# print(Ai)
+cnt = Counter(A)
+dup = [(n*(n-1))//2 for n in cnt.values()]
 
-for i in range(N):
-    for j in range(i+1, N):
-        if A[i] != A[j]:
-            count += 1
-print(count)
+print(total-sum(dup))
