@@ -12,3 +12,11 @@ for i in range(N):
         ans[j][i] = data[i][j]
 for x in ans:
     print(*x,sep='')
+# リストに*を付けて関数の引数に指定すると、それぞれの要素が展開され個別の引数として渡される。
+# print(*l)  # => print(0, 1, 2)
+# 0 1 2
+# print(*l, sep='')
+# 012
+
+# print(*l, sep='-')
+# 0-1-2
