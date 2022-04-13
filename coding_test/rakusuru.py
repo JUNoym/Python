@@ -10,9 +10,23 @@ result = is_palindrome(s)
 print(result)
 
 #　このコードのテストを書く
-from turtle import end_fill
 import unittest
-class Test(unittest.TestCase):
+from is_palindrome import is_palindrome
+
+class Test_is_palindrome(unittest.TestCase):
     def test_is_palindrome(self):
-        self.assertEqual(is_palindrome('abc'), False)
-        self.assertEqual(is_palindrome('たけやぶやけた'), True)
+        string = "たけやぶやけた"
+        expected = True
+        actual = is_palindrome(string)
+        self.assertEqual(expected, actual)
+   
+    def test_is_not_palindrome(self):
+        string = "たけやぶ"
+        expected = False
+        actual = is_palindrome(string)
+        self.assertEqual(expected, actual)
+   
+
+
+if __name__ == "__main__":
+    unittest.main()
